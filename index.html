@@ -6,7 +6,7 @@
         const startDate = new moment([2002, 3, 6, 12, 0, 0]);
         const currentDate = new moment();
   
-        let parsed = currentDate.diff(startDate);
+        let parsed = currentDate.diff(startDate).toNow(true);
   
         let years = currentDate.diff(startDate, 'years');
         let months = currentDate.diff(startDate, 'months');
