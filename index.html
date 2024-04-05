@@ -13,10 +13,10 @@
       <div class="seconds"></div>
     </div>
     <script>
-      const startDate = new moment('2002-04-06 12:00:00');
+      const startDate = new moment([2002, 3, 6, 12, 0, 0]);
       const currentDate = new moment();
 
-      const duration = moment.duration(currentDate.diff(startDate))
+      const duration = currentDate.diff(startDate);
 
       console.log(duration);
     </script>
