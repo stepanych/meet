@@ -8,7 +8,7 @@
   
         const diff = moment.duration(currentDate.diff(startDate));
 
-        let parsed = startDate.toNow(true);
+        let parsed = currentDate.from(startDate);
   
         let years = Math.floor(diff.asYears());
         let months = Math.floor(diff.asMonths());
