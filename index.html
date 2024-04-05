@@ -8,8 +8,11 @@
   
         const diff = moment.duration(currentDate.diff(startDate));
 
-        let parsed = currentDate.from(startDate);
+        //let parsed = currentDate.from(startDate);
   
+        let parsed = moment.utc(diff.as('milliseconds')).format('Y/m/d HH:mm:ss');
+
+
         let years = Math.floor(diff.asYears());
         let months = Math.floor(diff.asMonths());
         let days = Math.floor(diff.asDays());
