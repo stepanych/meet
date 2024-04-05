@@ -5,20 +5,34 @@
       const startDate = new moment([2002, 3, 6, 12, 0, 0]);
       const currentDate = new moment();
 
-      const duration = currentDate.diff(startDate, 'days');
+      let parsed = currentDate.diff(startDate);
 
-      console.log(duration);
+      let years = currentDate.diff(startDate, 'years');
+      let months = currentDate.diff(startDate, 'months');
+      let days = currentDate.diff(startDate, 'days');
+      let hours = currentDate.diff(startDate, 'hours');
+      let minutes = currentDate.diff(startDate, 'minutes');
+      let seconds = currentDate.diff(startDate, 'seconds');
+
+      document.getElementById('parsed').innerHTML = parsed;
+      document.getElementById('years').innerHTML = years;
+      document.getElementById('months').innerHTML = months;
+      document.getElementById('days').innerHTML = days;
+      document.getElementById('hours').innerHTML = hours;
+      document.getElementById('minutes').innerHTML = minutes;
+      document.getElementById('seconds').innerHTML = seconds;
+      
     </script>
   </head>
   <body>
     <div class="wrap">
-      <div class="date"></div>
-      <div class="years"></div>
-      <div class="months"></div>
-      <div class="days"></div>
-      <div class="hours"></div>
-      <div class="minutes"></div>
-      <div class="seconds"></div>
+            <div id="parsed"></div>
+      <div id="years"></div>
+      <div id="months"></div>
+      <div id="days"></div>
+      <div id="hours"></div>
+      <div id="minutes"></div>
+      <div id="seconds"></div>
     </div>
     
   </body>
