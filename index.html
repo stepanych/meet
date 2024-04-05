@@ -21,12 +21,12 @@
         let seconds = Math.floor(diff.asSeconds());
   
         document.getElementById('parsed').innerHTML = parsed;
-        document.getElementById('years').innerHTML = years;
-        document.getElementById('months').innerHTML = months;
-        document.getElementById('days').innerHTML = days;
-        document.getElementById('hours').innerHTML = hours;
-        document.getElementById('minutes').innerHTML = minutes;
-        document.getElementById('seconds').innerHTML = seconds;
+        document.getElementById('years').innerHTML = years.toLocaleString();
+        document.getElementById('months').innerHTML = months.toLocaleString();
+        document.getElementById('days').innerHTML = days.toLocaleString();
+        document.getElementById('hours').innerHTML = hours.toLocaleString();
+        document.getElementById('minutes').innerHTML = minutes.toLocaleString();
+        document.getElementById('seconds').innerHTML = seconds.toLocaleString();
       }
 
       setInterval(render, 1000);
