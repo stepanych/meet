@@ -6,14 +6,16 @@
         const startDate = new moment([2003, 3, 6, 12, 0, 0]);
         const currentDate = new moment();
   
+        const diff = moment.duration(currentDate.diff(startDate));
+
         let parsed = startDate.toNow(true);
   
-        let years = Math.floor(moment.duration(currentDate.diff(startDate)).asYears());
-        let months = currentDate.diff(startDate, 'months');
-        let days = currentDate.diff(startDate, 'days');
-        let hours = currentDate.diff(startDate, 'hours');
-        let minutes = currentDate.diff(startDate, 'minutes');
-        let seconds = currentDate.diff(startDate, 'seconds');
+        let years = Math.floor(diff.asYears());
+        let months = Math.floor(diff.asMonths());
+        let days = Math.floor(diff.asDays());
+        let hours = Math.floor(diff.asHours());
+        let minutes = Math.floor(diff.asMinutes());
+        let seconds = Math.floor(diff.asSeconds());
   
         document.getElementById('parsed').innerHTML = parsed;
         document.getElementById('years').innerHTML = years;
