@@ -16,7 +16,7 @@
       const startDate = new moment([2002, 3, 6, 12, 0, 0]);
       const currentDate = new moment();
 
-      const duration = currentDate.diff(startDate);
+      const duration = currentDate.diff(startDate, 'days');
 
       console.log(duration);
     </script>
