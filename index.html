@@ -8,9 +8,9 @@
   
         const diff = moment.duration(currentDate.diff(startDate));
 
-        //let parsed = currentDate.from(startDate);
+        let parsed = currentDate.from(startDate);
   
-        let parsed = diff.toISOString();
+        //let parsed = moment.utc(diff.asMilliseconds()).format("YY[yy]H[h]m[m]");
 
 
         let years = Math.floor(diff.asYears());
