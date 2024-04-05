@@ -10,7 +10,7 @@
 
         //let parsed = currentDate.from(startDate);
   
-        let parsed = moment.utc(diff.as('milliseconds')).format('Y/m/d HH:mm:ss');
+        let parsed = diff.toISOString();
 
 
         let years = Math.floor(diff.asYears());
