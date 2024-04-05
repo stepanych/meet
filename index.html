@@ -1,10 +1,24 @@
 <html>
   <head>
-    
+    script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" />
   </head>
   <body>
-    <div>
-      1
+    <div class="wrap">
+      <div class="date"></div>
+      <div class="years"></div>
+      <div class="months"></div>
+      <div class="days"></div>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
     </div>
+    <script>
+      const startDate = new moment('2002-04-06 12:00:00');
+      const currentDate = new moment();
+
+      const duration = moment.duration(currentDate.diff(startDate))
+
+      console.log(t);
+    </script>
   </body>
 </html>
