@@ -1,6 +1,14 @@
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" />
+      <script>
+      const startDate = new moment([2002, 3, 6, 12, 0, 0]);
+      const currentDate = new moment();
+
+      const duration = currentDate.diff(startDate, 'days');
+
+      console.log(duration);
+    </script>
   </head>
   <body>
     <div class="wrap">
@@ -12,13 +20,6 @@
       <div class="minutes"></div>
       <div class="seconds"></div>
     </div>
-    <script>
-      const startDate = new moment([2002, 3, 6, 12, 0, 0]);
-      const currentDate = new moment();
-
-      const duration = currentDate.diff(startDate, 'days');
-
-      console.log(duration);
-    </script>
+    
   </body>
 </html>
